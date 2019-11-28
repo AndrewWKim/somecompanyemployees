@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"; 
+@import '~ngx-toastr/toastr';
+
+table {
+    width: 100%;
+} 
+
+.user-row:hover{
+    cursor: pointer;
+    background-color: azure;
+}
+
+.btn {
+    background-color: DodgerBlue; 
+    border: none; 
+    color: white; 
+    padding: 12px 16px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    margin-left: 5px;
+  }
+  
+  .btn:hover {
+    background-color: RoyalBlue;
+  }
