@@ -60,7 +60,7 @@ namespace SomeCompanyEmployees.Services
 
 		private static IEnumerable<UserForTableView> ConvertUsersToTableView(IEnumerable<UserInfo> userInfos)
 		{
-			var result = userInfos.OrderByDescending(x => x.LastUpdateDate).Select(y => new UserForTableView
+			var result = userInfos.OrderByDescending(x => x.Id).Select(y => new UserForTableView
 			{
 				Id = y.Id,
 				FirstName = y.FirstName,

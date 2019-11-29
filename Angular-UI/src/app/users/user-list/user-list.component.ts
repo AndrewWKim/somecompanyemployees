@@ -37,8 +37,8 @@ export class UserListComponent implements AfterViewInit{
     })
   }
 
-  editUser(id){
-    this.router.navigate(['BLABLABLA']);
+  editUser(Id){
+    this.router.navigate(['/edit/user',Id]);
   }
 
   deleteUser(id){
@@ -54,5 +54,9 @@ export class UserListComponent implements AfterViewInit{
 
   routeToDetails(Id){
     this.router.navigate(['/user',Id]);
+  }
+
+  createNewUser(){
+    this.router.navigate(['/create-user']);
   }
 }

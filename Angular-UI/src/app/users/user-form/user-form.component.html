@@ -1,0 +1,40 @@
+<div>{{action.action}}</div>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <label>
+      First Name:
+      <input type="text" formControlName="FirstName" [(ngModel)]="userForAction.FirstName"/>
+    </label>
+  
+    <label>
+      Last Name:
+      <input type="text" formControlName="LastName" [(ngModel)]="userForAction.LastName"/>
+    </label>
+
+    <label>
+        Patronymic:
+        <input type="text" formControlName="Patronymic" [(ngModel)]="userForAction.Patronymic"/>
+    </label>
+
+    <label>
+        Age:
+        <input type="number" formControlName="Age" [(ngModel)]="userForAction.Age"/>
+    </label>
+
+    <label>
+        Gender:
+    </label>
+        <label><input type="radio" formControlName="Gender" value="male" [(ngModel)]="userForAction.Gender">  Male</label>
+        <label><input type="radio" formControlName="Gender" value="female" [(ngModel)]="userForAction.Gender">  Female</label>
+
+
+    <label>
+        Position:
+        <input type="text" formControlName="Position" [(ngModel)]="userForAction.Position"/>
+    </label>
+
+    <button type="submit" [disabled]="!userForm.valid">Submit</button>
+  </form>
+  <div>&nbsp;</div>
+<button class="btn" (click)="service.goBack()"><i class="fa fa-arrow-circle-left"></i> Cancel</button>
+  

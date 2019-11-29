@@ -5,5 +5,9 @@
 <div>{{currentUserInfo.Age}}</div>
 <div>{{currentUserInfo.Gender}}</div>
 <div>{{currentUserInfo.Position}}</div>
-<div>{{currentUserInfo.RegistrationDate}}</div>
-<div>{{currentUserInfo.LastUpdateDate}}</div>
+<div>{{currentUserInfo.RegistrationDate| date:'medium'}}</div>
+<div>{{currentUserInfo.LastUpdateDate | date:'medium'}}</div>
+
+<div>
+    <button class="btn" (click)="service.goBack()"><i class="fa fa-arrow-circle-left"></i> Back</button>
+</div>

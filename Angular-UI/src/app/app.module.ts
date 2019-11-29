@@ -10,9 +10,10 @@ import { UsersComponent } from './users/users.component';
 import { UserComponent } from './users/user/user.component';
 import { UserListComponent } from './users/user-list/user-list.component';
 import { UserService } from './users/shared/user.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { MatTableModule} from '@angular/material/table'; 
 import { ToastrModule } from 'ngx-toastr';
+import { UserFormComponent } from './users/user-form/user-form.component';
 
 
 @NgModule({
@@ -20,12 +21,14 @@ import { ToastrModule } from 'ngx-toastr';
     AppComponent,
     UsersComponent,
     UserComponent,
-    UserListComponent
+    UserListComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatTableModule,

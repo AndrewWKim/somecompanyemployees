@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { environment } from 'src/environments/environment';
-import { UserInfo } from './user-info';
-import { UserForTable } from './user-for-table';
-import { Observable } from 'rxjs';
+import { Location} from '@angular/common';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +10,7 @@ import { Observable } from 'rxjs';
 export class UserService {
   rootUrl= environment.apiUrl;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private location: Location, private router: Router) { }
 
   getUserForTableList(){
     return this.http.get(this.rootUrl+"/users");
@@ -33,4 +32,11 @@ export class UserService {
     return this.http.delete(this.rootUrl+"/users/"+id);
   }
 
+  goBack() {
+    this.location.back();
+  }
+
+  goToMain(){
+    this.router.navigate(['./users']);
+  }
 }
