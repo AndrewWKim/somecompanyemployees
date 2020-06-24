@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"; 
+@import '~ngx-toastr/toastr';
+
+table {
+    width: 100%;
+} 
+
+.user-row:hover{
+    cursor: pointer;
+    background-color: azure;
+}
+
+.btn {
+    background-color: DodgerBlue; 
+    border: none; 
+    color: white; 
+    padding: 12px 16px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    margin-left: 5px;
+  }
+  
+  .btn:hover {
+    background-color: RoyalBlue;
+  }
+
+
+
+
+
+  :host {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+  }
+  
+  label {
+    display: block;
+    width: 6em;
+    margin: .5em 0;
+    color: #607D8B;
+    font-weight: bold;
+  }
+  
+  input {
+    height: 2em;
+    font-size: 1em;
+    padding-left: .4em;
+  }
+  
+  button {
+    font-family: Arial;
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #cfd8dc;
+  }
+  
+  button:disabled {
+    background-color: #eee;
+    color: #ccc;
+    cursor: auto;
+  }

@@ -1,1 +1,13 @@
-<p>user works!</p>
+<div>User ID is {{userId}}</div>
+<div>{{currentUserInfo.FirstName}}</div>
+<div>{{currentUserInfo.LastName}}</div>
+<div>{{currentUserInfo.Patronymic}}</div>
+<div>{{currentUserInfo.Age}}</div>
+<div>{{currentUserInfo.Gender}}</div>
+<div>{{currentUserInfo.Position}}</div>
+<div>{{currentUserInfo.RegistrationDate| date:'medium'}}</div>
+<div>{{currentUserInfo.LastUpdateDate | date:'medium'}}</div>
+
+<div>
+    <button class="btn" (click)="service.goBack()"><i class="fa fa-arrow-circle-left"></i> Back</button>
+</div>
